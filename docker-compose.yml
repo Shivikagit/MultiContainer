@@ -2,13 +2,13 @@ version: '3'
 
 services:
   catalog-service:
-    image: vishwacloudlab/catalog-service
+    image: shivikadocker/catalog-service
     ports: 
      - "80:80"
   redis:
     image: redis:alpine
   review-service:
-    image: vishwacloudlab/review-service
+    image: shivikadocker/review-service
     ports:
     - "90:90"
     restart: always
@@ -21,7 +21,7 @@ services:
           cpus: '0.001'
           memory: 20M
   order-service:
-    image: vishwacloudlab/order-service
+    image: shivikadocker/order-service
     ports:
     - "95:95"
     restart: always
